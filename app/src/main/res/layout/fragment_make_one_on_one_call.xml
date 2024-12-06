@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:keepScreenOn="true">
+
+    <ImageView
+        android:id="@+id/btn_prev"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/icon_prev"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_prev"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/textview_title"
+        android:text="@string/lp_demoapp_1to1_scenarios_basic"/>
+
+    <ImageView
+        android:id="@+id/btn_home"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/icon_home"
+        android:layout_alignTop="@+id/btn_prev"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_category_peer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_home"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/lp_demoapp_1to1_scenarios_basic_setup_callee"
+        android:theme="@style/textview_category"/>
+
+    <EditText
+        android:id="@+id/et_peer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_category_peer_id"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:inputType="text"
+        android:hint="@string/lp_demoapp_1to1_scenarios_basic_setup_placeholder"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
+        android:maxLength="64"/>
+    
+    <TextView
+        android:id="@+id/tv_description_my_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_peer_id"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/lp_demoapp_1to1_scenarios_basic_setup_guide"
+        android:theme="@style/textview_description_normal"/>
+
+    <Button
+        android:id="@+id/btn_voice_call"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_description_my_name"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/lp_demoapp_1to1_scenarios_basic_setup_btn1"
+        android:background="@drawable/selector_normal_button"
+        android:theme="@style/button_normal"/>
+
+    <Button
+        android:id="@+id/btn_video_call"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_voice_call"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/lp_demoapp_1to1_scenarios_basic_setup_btn2"
+        android:background="@drawable/selector_normal_button"
+        android:theme="@style/button_normal"/>
+
+    <TextView
+        android:id="@+id/tv_sdk_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="SDK 5.2.5"/>
+
+    <TextView
+        android:id="@+id/tv_app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_sdk_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="Demo App 1.0.0"/>
+</RelativeLayout>

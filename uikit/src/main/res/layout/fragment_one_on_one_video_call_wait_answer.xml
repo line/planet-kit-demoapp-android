@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:keepScreenOn="true">
+
+    <com.linecorp.planetkit.ui.PlanetKitVideoView
+        android:id="@+id/my_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/img_peer_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/icon_no_profile"/>
+
+    <TextView
+        android:id="@+id/tv_peer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_peer_profile"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@+id/img_peer_profile"
+        android:theme="@style/textview_category_white_22"/>
+
+    <TextView
+        android:id="@+id/tv_calling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_peer_id"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@+id/tv_peer_id"
+        android:text="@string/lp_demoapp_1to1_scenarios_basic_calling"
+        android:theme="@style/textview_white_15"/>
+
+    <ImageView
+        android:id="@+id/btn_end_call"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_end_call"/>
+</RelativeLayout>

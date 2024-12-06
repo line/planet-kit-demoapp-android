@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navy_fragment_main">
+    <fragment
+        android:id="@+id/navy_fragment_main"
+        android:name="com.linecorp.planetkit.demo.MainFragment">
+        <action
+            android:id="@+id/action_main_to_settings_fragment"
+            app:destination="@id/navy_fragment_settings" />
+
+        <action
+            android:id="@+id/action_main_to_call_features_fragment"
+            app:destination="@id/navy_fragment_call_features" />
+
+        <action
+            android:id="@+id/action_main_to_group_call_first_fragment"
+            app:destination="@id/navy_fragment_group_call_first" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navy_fragment_call_features"
+        android:name="com.linecorp.planetkit.demo.OneOnOneCallFeaturesFragment">
+        <action
+            android:id="@+id/action_call_features_to_main"
+            app:popUpTo="@id/navy_fragment_main"
+            app:popUpToInclusive="true"
+            app:destination="@id/navy_fragment_main" />
+
+        <action
+            android:id="@+id/action_call_features_to_make_call"
+            app:destination="@id/navy_fragment_make_one_on_one_call" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navy_fragment_group_call"
+        android:name="com.linecorp.planetkit.demo.uikit.fragments.GroupCallFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navy_fragment_group_call_first"
+        android:name="com.linecorp.planetkit.demo.GroupCallFirstFragment">
+
+        <action
+            android:id="@+id/action_group_call_features_to_main"
+            app:popUpTo="@id/navy_fragment_main"
+            app:popUpToInclusive="true"
+            app:destination="@id/navy_fragment_main" />
+
+        <action
+            android:id="@+id/action_group_call_features_to_join_group_call"
+            app:destination="@id/navy_fragment_make_group_call" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navy_fragment_group_call_main"
+        android:name="com.linecorp.planetkit.demo.uikit.fragments.GroupCallMainFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navy_fragment_make_one_on_one_call"
+        android:name="com.linecorp.planetkit.demo.OneOnOneMakeCallFragment">
+        <action
+            android:id="@+id/action_make_call_to_call_features"
+            app:popUpTo="@id/navy_fragment_call_features"
+            app:popUpToInclusive="true"
+            app:destination="@id/navy_fragment_call_features" />
+        <action
+            android:id="@+id/action_make_call_to_main"
+            app:popUpTo="@id/navy_fragment_main"
+            app:popUpToInclusive="true"
+            app:destination="@id/navy_fragment_main" />
+        <action
+            android:id="@+id/action_make_call_to_voice_call"
+            app:destination="@id/navy_fragment_one_on_one_voice_call" />
+        <action
+            android:id="@+id/action_make_call_to_video_call"
+            app:destination="@id/navy_fragment_one_on_one_video_call" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navy_fragment_make_group_call"
+        android:name="com.linecorp.planetkit.demo.JoinGroupCallFragment">
+        <action
+            android:id="@+id/action_make_group_call_to_group_call_features"
+            app:popUpTo="@id/navy_fragment_group_call_first"
+            app:popUpToInclusive="true"
+            app:destination="@id/navy_fragment_group_call_first" />
+        <action
+            android:id="@+id/action_make_group_call_to_main"
+            app:popUpTo="@id/navy_fragment_main"
+            app:popUpToInclusive="true"
+            app:destination="@id/navy_fragment_main" />
+        <action
+            android:id="@+id/action_make_group_call_to_group_call_main"
+            app:destination="@id/navy_fragment_group_call_main" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navy_fragment_settings"
+        android:name="com.linecorp.planetkit.demo.SettingsFragment">
+        <action
+            android:id="@+id/action_settings_to_main"
+            app:popUpTo="@id/navy_fragment_main"
+            app:popUpToInclusive="true"
+            app:destination="@id/navy_fragment_main" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navy_fragment_one_on_one_video_call"
+        android:name="com.linecorp.planetkit.demo.uikit.fragments.OneOnOneVideoCallFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navy_fragment_one_on_one_voice_call"
+        android:name="com.linecorp.planetkit.demo.uikit.fragments.OneOnOneVoiceCallFragment">
+    </fragment>
+
+</navigation>
