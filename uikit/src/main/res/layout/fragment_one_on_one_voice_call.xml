@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:keepScreenOn="true">
+
+    <include
+        android:id="@+id/profile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        layout="@layout/profile_image"/>
+
+    <TextView
+        android:id="@+id/tv_peer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Peer Id"
+        android:theme="@style/textview_category_white_22"/>
+
+    <LinearLayout
+        android:id="@+id/group_wait_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_peer_id"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_call_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lp_demoapp_1to1_scenarios_basic_calling"
+            android:theme="@style/textview_white_15"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_call_connected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_peer_id"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_call_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="00:00:00"
+            android:theme="@style/textview_white_15"/>
+
+        <TextView
+            android:id="@+id/tv_peer_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:text="@string/lp_demoapp_1to1_scenarios_basic_inacall1"
+            android:theme="@style/textview_white_15"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_end_call"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_end_call"/>
+
+    <ImageView
+        android:id="@+id/image_mic_mute"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/image_end_call"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/icon_mic_on_fill"/>
+</RelativeLayout>
