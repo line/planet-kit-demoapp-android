@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:keepScreenOn="true">
+
+    <ImageView
+        android:id="@+id/btn_prev"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/icon_prev"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_prev"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/textview_title"
+        android:text="@string/lp_demoapp_group_scenarios_title"/>
+
+    <ImageView
+        android:id="@+id/btn_home"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/icon_home"
+        android:layout_alignTop="@+id/btn_prev"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"/>
+
+    <Button
+        android:id="@+id/btn_basic_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/lp_demoapp_group_scenarios_basic"
+        android:background="@drawable/selector_normal_button"
+        android:theme="@style/button_normal"/>
+
+    <Button
+        android:id="@+id/btn_social_community"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lp_demoapp_group_scenarios_social"
+        android:layout_below="@+id/btn_basic_call"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/selector_normal_button"
+        android:enabled="false"
+        android:theme="@style/button_normal"/>
+
+    <Button
+        android:id="@+id/btn_online_education"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lp_demoapp_group_scenarios_onlineedu"
+        android:layout_below="@+id/btn_social_community"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/selector_normal_button"
+        android:enabled="false"
+        android:theme="@style/button_normal"/>
+
+    <Button
+        android:id="@+id/btn_remote_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lp_demoapp_group_scenarios_remotework"
+        android:layout_below="@+id/btn_online_education"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/selector_normal_button"
+        android:enabled="false"
+        android:theme="@style/button_normal"/>
+
+    <Button
+        android:id="@+id/btn_game_metaverse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lp_demoapp_group_scenarios_game"
+        android:layout_below="@+id/btn_remote_work"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/selector_normal_button"
+        android:enabled="false"
+        android:theme="@style/button_normal"/>
+
+    <TextView
+        android:id="@+id/tv_description_group_call_feature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_game_metaverse"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/lp_demoapp_group_scenarios_guide"
+        android:theme="@style/textview_description_normal"/>
+
+</RelativeLayout>
